@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+	<Appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%msg%n" />
+			<!-- PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} 
+				- %msg%n" / -->
+		</Console>
+		<File name="LogFile" fileName="gen/log/all.log" immediateFlush="false"
+			append="false">
+			<!-- <PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level 
+				- %msg%n" /> -->
+			<PatternLayout pattern="%msg%n" />
+			<!-- pattern="%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} -->
+			<!-- - %msg%n" /> -->
+		</File>
+	</Appenders>
+	<Loggers>
+
+		<Root level="INFO">
+			<AppenderRef ref="Console" />
+			<AppenderRef ref="LogFile" />
+		</Root>
+
+		<!-- ++++++++++++++++++++++++ -->
+		<!-- Loggers for this project -->
+		<!-- ++++++++++++++++++++++++ -->
+		<Logger name="main.Dregon" level="INFO" additivity="false">
+			<AppenderRef ref="Console" />
+			<AppenderRef ref="LogFile" />
+		</Logger>
+
+		<Logger name="corpus.parser.Brat2BIREConverter" level="WARN"
+			additivity="false">
+			<AppenderRef ref="Console" />
+			<AppenderRef ref="LogFile" />
+		</Logger>
+
+		<Logger name="corpus.parser.BratConfigReader" level="WARN"
+			additivity="false">
+			<AppenderRef ref="Console" />
+			<AppenderRef ref="LogFile" />
+		</Logger>
+
+
+		<!-- ++++++++++++++++++++++++ -->
+		<!-- Loggers for BIRE project -->
+		<!-- ++++++++++++++++++++++++ -->
+
+
+		<Logger name="learning.DefaultLearner" level="WARN" additivity="false">
+			<AppenderRef ref="Console" />
+			<AppenderRef ref="LogFile" />
+		</Logger>
+
+		<Logger name="learning.Trainer" level="INFO" additivity="false">
+			<AppenderRef ref="Console" />
+			<AppenderRef ref="LogFile" />
+		</Logger>
+		<Logger name="sampling.DefaultSampler" level="WARN" additivity="false">
+<!-- 		<Logger name="sampling.DefaultSampler" level="INFO" additivity="false"> -->
+			<AppenderRef ref="Console" />
+			<AppenderRef ref="LogFile" />
+		</Logger>
+
+		<Logger name="evaluation.EvaluationUtil" level="INFO"
+			additivity="false">
+			<AppenderRef ref="Console" />
+			<AppenderRef ref="LogFile" />
+		</Logger>
+		<Logger name="evaluation.TaggedTimer" level="INFO" additivity="false">
+			<AppenderRef ref="Console" />
+			<AppenderRef ref="LogFile" />
+		</Logger>
+
+		<Logger name="learning.callbacks.SimpleLogCallback" level="INFO"
+			additivity="false">
+			<AppenderRef ref="Console" />
+			<AppenderRef ref="LogFile" />
+		</Logger>
+	</Loggers>
+</Configuration>
