@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry exported="true" kind="lib" path="libs/lucene-analyzers-3.6.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/lucene-analyzers-common-4.6.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/lucene-core-4.6.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/lucene-join-4.6.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/lucene-queryparser-4.6.1.jar"/>
+	<classpathentry kind="lib" path="libs/slf4j-simple.jar"/>
+	<classpathentry kind="lib" path="libs/stanford-postagger.jar"/>
+	<classpathentry kind="lib" path="libs/slf4j-api.jar"/>
+	<classpathentry kind="lib" path="libs/guava-18.0.jar" sourcepath="/home/hterhors/.m2/repository/com/google/guava/guava/18.0/guava-18.0-sources.jar"/>
+	<classpathentry kind="lib" path="libs/log4j-api-2.4.jar"/>
+	<classpathentry kind="lib" path="libs/log4j-core-2.4.jar"/>
+	<classpathentry kind="lib" path="libs/JSBDv1.6-extendend-api.jar"/>
+	<classpathentry kind="lib" path="libs/JTBDv1.6-extendend-api.jar"/>
+	<classpathentry kind="lib" path="libs/mallet-deps.jar"/>
+	<classpathentry kind="lib" path="libs/mallet-optimized.jar"/>
+	<classpathentry kind="lib" path="libs/mallet-troveless-0.4.jar"/>
+	<classpathentry kind="lib" path="libs/trove-1.1b5.jar"/>
+	<classpathentry kind="lib" path="libs/stanford-parser.jar"/>
+	<classpathentry excluding="templates/ContentTemplate.java|templates/DictionaryLookupTemplateBlownUp.java|templates/DictionaryTemplate.java|templates/DiseaseRecognitionMorphologicalTemplate.java|templates/DocumentLevelTemplate.java|templates/MinimalMorphologicalTemplate.java|templates/NCBIContextTemplate.java|templates/ObjectiveFunctionTemplate.java|templates/TESTTemplate.java|corpus/parser/NCBIRegexTokenizer.java|corpus/parser/NCBIStanfordTokenizer.java|evaluation/NCBI_DiseaseLearningBAK.java|evaluation/NCBI_DiseaseLearning2.java|learner/DefaultLearner.java|evaluation/NCBI_DiseaseLearningBAK2.java|templates/InverseTokenIntersectionTemplate.java|templates/DictionaryLookupTemplateFlatBEFORE_PUBLICATION.java|templates/DictionaryLookupTemplateFlatBEST.java|templates/DictionaryLookupTemplateFlatMESSIE.java|medic/dict/DiseaseDictionaryFactoryBACK.java|baseline/dnorm/EvaluateWebDNorm.java|playground/DirectEntryMatchAndDisambiguationStream.java|playground/TermToListOfIDs.java|templates/DictionaryLookupTemplateFlat.java|tokenization/StanfordLemmatizer.java|templates/MorphologicalTemplate.java|templates/DictionaryTRIDFTemplate.java|medic/dict/DiseaseDictionary.java|medic/dict/DiseaseDictionaryBackUP.java|medic/dict/DiseaseDictionaryFactory.java|playground/IDFDictionaryCheck.java" kind="src" output="target/classes" path="src">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry excluding="**" kind="src" output="target/classes" path="config">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry combineaccessrules="false" kind="src" path="/BIRE"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>
