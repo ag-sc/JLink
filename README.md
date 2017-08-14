@@ -2,10 +2,10 @@
 A Joint Entity Recognition and Linking Tool for Technical Domains using Undirected Probabilistic Graphical Models with BiGram (former BIRE)
 
 
-<b> NOTE: The documentation is far from complete. If you have any issues feel free to write me an email. I will try to add more documentation by time. <\b>
+<b> NOTE: The documentation is far from complete. If you have any issues feel free to write me an email. I will try to add more documentation by time. </b>
 
 
-<b>Quick start:<\b>
+<b>Quick start:</b>
 
 1. Clone BIRE simplified-api branch from: https://github.com/ag-sc
 2. Clone this project.
@@ -30,7 +30,7 @@ A Joint Entity Recognition and Linking Tool for Technical Domains using Undirect
 
 10. Run the Main.java 
 
-<b>HINT:<\b>
+<b>HINT:</b>
 
 If you want to test only on test data, merge training and development files from CDR_Corpus into one file. Use this as training data corpus. 
 
