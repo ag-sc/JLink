@@ -5,7 +5,7 @@ A Joint Entity Recognition and Linking Tool for Technical Domains using Undirect
 
 Quick start:
 
-1. Clone BIRE repository from: https://github.com/ag-sc
+1. Clone BIRE simplified-api branch from: https://github.com/ag-sc
 2. Clone this project.
 3. Import projects into your IDE-workspace (preferably eclipse).
 4. Build maven. (If necessary)
