@@ -35,7 +35,15 @@ public class DataReader {
 
 		switch (JLink.setting.corpus) {
 		case BC5:
-			inputFileName = prefix + "/bc5/" + "/CDR_" + dataset.fullName + "_corpus.txt";
+			// inputFileName = prefix + "/bc5/" + "/CDR_" + dataset.fullName +
+			// "_corpus.txt";
+			if (dataset == EDataset.TRAIN) {
+				inputFileName = DatasetConfig.getTrainCorpusPath();
+			} else if (dataset == EDataset.DEVELOP) {
+				inputFileName = DatasetConfig.getDevelopmentCorpusPath();
+			} else if (dataset == EDataset.TEST) {
+				inputFileName = DatasetConfig.getTestCorpusPath();
+			}
 			break;
 		case NCBI:
 			inputFileName = prefix + "/ncbi_disease/" + "/NCBI_" + dataset.fullName + "_corpus.txt";

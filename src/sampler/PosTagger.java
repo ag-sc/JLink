@@ -20,7 +20,11 @@ public class PosTagger {
 	private static MaxentTagger tagger;
 
 	public PosTagger() {
-		tagger = new MaxentTagger(DatasetConfig.getPosTaggerFile());
+		try {
+			tagger = new MaxentTagger(DatasetConfig.getPosTaggerFile());
+		} catch (ClassNotFoundException | IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 	public boolean wordIsNONAdjective(String word) {

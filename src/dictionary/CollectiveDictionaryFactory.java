@@ -52,8 +52,16 @@ public class CollectiveDictionaryFactory {
 
 			diseaseDictionary.addDictionary(new DiseaseMedicDictionary(5));
 
-			if (JLink.setting.testDataset == EDataset.TEST)
-				diseaseDictionary.addDictionary(new DiseaseDatasetDictionary(EDataset.DEVELOP, 4));
+			/*
+			 * NOTE: We remove this since on test set develop should be included
+			 * in training data.
+			 * 
+			 * TODO: If one need distinction between train and development data
+			 * (for ordering importance e.g.) distinguish here!
+			 */
+			// if (JLink.setting.testDataset == EDataset.TEST)
+			// diseaseDictionary.addDictionary(new
+			// DiseaseDatasetDictionary(EDataset.DEVELOP, 4));
 
 			diseaseDictionary.addDictionary(new DiseaseDatasetDictionary(EDataset.TRAIN, 3));
 			diseaseDictionary.build();
@@ -69,8 +77,9 @@ public class CollectiveDictionaryFactory {
 			chemicalDictionary = new CollectiveDictionary();
 
 			chemicalDictionary.addDictionary(new ChemicalMedicDictionary(5));
-			if (JLink.setting.testDataset == EDataset.TEST)
-				chemicalDictionary.addDictionary(new ChemicalDatasetDictionary(EDataset.DEVELOP, 4));
+			// if (JLink.setting.testDataset == EDataset.TEST)
+			// chemicalDictionary.addDictionary(new
+			// ChemicalDatasetDictionary(EDataset.DEVELOP, 4));
 			chemicalDictionary.addDictionary(new ChemicalDatasetDictionary(EDataset.TRAIN, 3));
 
 			chemicalDictionary.build();
