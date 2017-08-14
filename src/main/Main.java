@@ -19,7 +19,7 @@ public class Main {
 
 	public static Logger log = LogManager.getFormatterLogger(Main.class.getSimpleName());
 
-	private static final long version = 9999;
+	private static final long version = 1;
 
 	public static final boolean DEBUG = false;
 
