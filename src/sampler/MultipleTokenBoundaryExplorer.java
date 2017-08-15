@@ -55,11 +55,15 @@ public class MultipleTokenBoundaryExplorer implements Explorer<JLinkState> {
 	private Set<String> knownRules;
 
 	private Map<String, Set<CharacterRule>> cache = new HashMap<>();
+	private PosTagger posTagger;
 
 	private MultipleTokenBoundaryExplorer(final boolean includeSynonyms, final boolean includeMorphs) {
-		PosTagger posTagger = new PosTagger();
 		this.includeSynonyms = includeSynonyms;
 		this.includeMorphs = includeMorphs;
+
+		if (includeSynonyms) {
+			posTagger = new PosTagger();
+		}
 
 		dict = CollectiveDictionaryFactory.getInstance();
 		buildDistributedDictionary();
