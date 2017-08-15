@@ -244,7 +244,7 @@ public class ParameterReader {
 		boolean includeInternalMentionTokenTemplate = true;
 		boolean includeTokenContextTemplate = true;
 		boolean includeConceptContextTemplate = false;
-		boolean includeSyntacticTransformation = true;
+		boolean includeSemanticTransformation = true;
 		boolean includeAnnotationTextTemplate = true;
 		boolean includeCadidateRetrievalTemplate = true;
 		boolean includeAbbreviationTemplate = true;
@@ -253,7 +253,7 @@ public class ParameterReader {
 
 		TemplateSetting templateSetting = new TemplateSetting(includeDictionaryLookUpTemplate,
 				includeNumberOfTokensTemplate, includeInternalMentionTokenTemplate, includeTokenContextTemplate,
-				includeConceptContextTemplate, includeSyntacticTransformation, includeAnnotationTextTemplate,
+				includeConceptContextTemplate, includeSemanticTransformation, includeAnnotationTextTemplate,
 				includeCadidateRetrievalTemplate, includeAbbreviationTemplate,
 				includeMorphologicalTransformationTemplate, includeTrainingPriorTemplate);
 

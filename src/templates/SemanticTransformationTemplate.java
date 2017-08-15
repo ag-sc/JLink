@@ -10,16 +10,16 @@ import org.apache.logging.log4j.Logger;
 import factors.Factor;
 import factors.FactorScope;
 import learning.Vector;
-import templates.SyntacticTransformationTemplate.Scope;
+import templates.SemanticTransformationTemplate.Scope;
 import tokenization.Tokenizer;
 import variables.JLinkState;
 import variables.EntityAnnotation;
 import variables.LabeledJlinkDocument;
 
-public class SyntacticTransformationTemplate extends AbstractTemplate<LabeledJlinkDocument, JLinkState, Scope>
+public class SemanticTransformationTemplate extends AbstractTemplate<LabeledJlinkDocument, JLinkState, Scope>
 		implements Serializable {
 
-	private static Logger log = LogManager.getFormatterLogger(SyntacticTransformationTemplate.class.getName());
+	private static Logger log = LogManager.getFormatterLogger(SemanticTransformationTemplate.class.getName());
 
 	static class Scope extends FactorScope {
 

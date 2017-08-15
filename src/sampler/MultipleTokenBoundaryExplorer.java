@@ -24,7 +24,7 @@ import metric.LevenShteinSimilarities;
 import sampling.Explorer;
 import templates.AbstractTemplate;
 import templates.MorphologicalTransformationTemplate;
-import templates.SyntacticTransformationTemplate;
+import templates.SemanticTransformationTemplate;
 import templates.container.CharacterRule;
 import tokenization.Tokenizer;
 import util.StringUtils;
@@ -100,7 +100,7 @@ public class MultipleTokenBoundaryExplorer implements Explorer<JLinkState> {
 	}
 
 	public MultipleTokenBoundaryExplorer(Map<Class<? extends AbstractTemplate<?, ?, ?>>, Boolean> setting) {
-		this(setting.get(SyntacticTransformationTemplate.class),
+		this(setting.get(SemanticTransformationTemplate.class),
 				setting.get(MorphologicalTransformationTemplate.class));
 	}
 

@@ -12,7 +12,7 @@ import templates.DictionaryLookUpTemplate;
 import templates.InternalMentionTokenTemplate;
 import templates.MorphologicalTransformationTemplate;
 import templates.NumberOfTokensTemplate;
-import templates.SyntacticTransformationTemplate;
+import templates.SemanticTransformationTemplate;
 import templates.TokenContextTemplate;
 import templates.TrainingPriorTemplate;
 
@@ -34,7 +34,7 @@ public class TemplateSetting {
 		this.setting.put(InternalMentionTokenTemplate.class, includeInternalMentionTokenTemplate);
 		this.setting.put(TokenContextTemplate.class, includeTokenContextTemplate);
 		this.setting.put(ConceptContextTemplate.class, includeConceptContextTemplate);
-		this.setting.put(SyntacticTransformationTemplate.class, includeSyntacticTransformation);
+		this.setting.put(SemanticTransformationTemplate.class, includeSyntacticTransformation);
 		this.setting.put(AnnotationTextTemplate.class, includeAnnotationTextTemplate);
 		this.setting.put(CadidateRetrievalTemplate.class, includeCadidateRetrievalTemplate);
 		this.setting.put(AbbreviationTemplate.class, includeAbbreviationTemplate);
