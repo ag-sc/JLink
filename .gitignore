@@ -1,1 +1,6 @@
 /bin/
+/gen/
+/libs/
+/res/
+/stuff/
+/target/

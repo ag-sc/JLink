@@ -1,30 +1,28 @@
 package sampler;
 
-import java.io.IOException;
 import java.io.StringReader;
 import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
 
-import corpus.DataReader;
 import corpus.DatasetConfig;
 import edu.stanford.nlp.ling.HasWord;
-import edu.stanford.nlp.ling.Sentence;
 import edu.stanford.nlp.ling.TaggedWord;
 import edu.stanford.nlp.tagger.maxent.MaxentTagger;
-import main.setting.EDataset;
-import tokenization.Tokenizer;
 
 public class PosTagger {
 
-	private static MaxentTagger tagger;
+	private MaxentTagger tagger;
 
-	public PosTagger() {
-		try {
-			tagger = new MaxentTagger(DatasetConfig.getPosTaggerFile());
-		} catch (ClassNotFoundException | IOException e) {
-			e.printStackTrace();
+	private PosTagger() {
+		tagger = new MaxentTagger(DatasetConfig.getPosTaggerFile());
+	}
+
+	private static PosTagger posTagger;
+
+	public synchronized static PosTagger getPosTagger() {
+		if (posTagger == null) {
+			posTagger = new PosTagger();
 		}
+		return posTagger;
 	}
 
 	public boolean wordIsNONAdjective(String word) {
@@ -43,21 +41,6 @@ public class PosTagger {
 			return false;
 
 		return true;
-	}
-
-	private void tagCorpus() throws IOException {
-		Map<String, String> documents = DataReader.loadTexts(EDataset.DEVELOP);
-
-		for (Entry<String, String> string : documents.entrySet()) {
-			System.out.println(string.getKey());
-			final String doc = Tokenizer.getTokenizedForm(string.getValue());
-
-			List<List<HasWord>> sentences = MaxentTagger.tokenizeText(new StringReader(doc));
-			for (List<HasWord> sentence : sentences) {
-				List<TaggedWord> tSentence = tagger.tagSentence(sentence);
-				System.out.println(Sentence.listToString(tSentence, false));
-			}
-		}
 	}
 
 }

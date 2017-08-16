@@ -62,7 +62,7 @@ public class MultipleTokenBoundaryExplorer implements Explorer<JLinkState> {
 		this.includeMorphs = includeMorphs;
 
 		if (includeSynonyms) {
-			posTagger = new PosTagger();
+			posTagger = PosTagger.getPosTagger();
 		}
 
 		dict = CollectiveDictionaryFactory.getInstance();

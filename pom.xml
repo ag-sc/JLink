@@ -5,6 +5,14 @@
 	<artifactId>DiseasesChemicals</artifactId>
 	<version>0.0.1</version>
 
+	<repositories>
+		<repository>
+			<id>clojars.org</id>
+			<name>CloJars</name>
+			<url>http://clojars.org/repo/</url>
+		</repository>
+	</repositories>
+
 	<dependencies>
 
 
@@ -19,6 +27,14 @@
 			<artifactId>log4j-core</artifactId>
 			<version>2.8.2</version>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/edu.stanford.nlp/stanford-corenlp -->
+		<dependency>
+			<groupId>edu.stanford.nlp</groupId>
+			<artifactId>stanford-corenlp</artifactId>
+			<version>3.8.0</version>
+		</dependency>
+
 
 		<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
 		<dependency>
@@ -45,6 +61,11 @@
 			<artifactId>lucene-queryparser</artifactId>
 			<version>4.6.1</version>
 		</dependency>
+		<dependency>
+			<groupId>de.citec.sc</groupId>
+			<artifactId>BIRE</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 
 	</dependencies>
 
@@ -63,8 +84,41 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.3</version>
 				<configuration>
-					<source />
-					<target />
+					<source>1.8</source>
+					<target>1.8</target>
+					<excludes>
+						<exclude>templates/ContentTemplate.java</exclude>
+						<exclude>templates/DictionaryLookupTemplateBlownUp.java</exclude>
+						<exclude>templates/DictionaryTemplate.java</exclude>
+						<exclude>templates/DiseaseRecognitionMorphologicalTemplate.java</exclude>
+						<exclude>templates/DocumentLevelTemplate.java</exclude>
+						<exclude>templates/MinimalMorphologicalTemplate.java</exclude>
+						<exclude>templates/NCBIContextTemplate.java</exclude>
+						<exclude>templates/ObjectiveFunctionTemplate.java</exclude>
+						<exclude>templates/TESTTemplate.java</exclude>
+						<exclude>corpus/parser/NCBIRegexTokenizer.java</exclude>
+						<exclude>corpus/parser/NCBIStanfordTokenizer.java</exclude>
+						<exclude>evaluation/NCBI_DiseaseLearningBAK.java</exclude>
+						<exclude>evaluation/NCBI_DiseaseLearning2.java</exclude>
+						<exclude>learner/DefaultLearner.java</exclude>
+						<exclude>evaluation/NCBI_DiseaseLearningBAK2.java</exclude>
+						<exclude>templates/InverseTokenIntersectionTemplate.java</exclude>
+						<exclude>templates/DictionaryLookupTemplateFlatBEFORE_PUBLICATION.java</exclude>
+						<exclude>templates/DictionaryLookupTemplateFlatBEST.java</exclude>
+						<exclude>templates/DictionaryLookupTemplateFlatMESSIE.java</exclude>
+						<exclude>medic/dict/DiseaseDictionaryFactoryBACK.java</exclude>
+						<exclude>baseline/dnorm/EvaluateWebDNorm.java</exclude>
+						<exclude>playground/DirectEntryMatchAndDisambiguationStream.java</exclude>
+						<exclude>playground/TermToListOfIDs.java</exclude>
+						<exclude>templates/DictionaryLookupTemplateFlat.java</exclude>
+						<exclude>tokenization/StanfordLemmatizer.java</exclude>
+						<exclude>templates/MorphologicalTemplate.java</exclude>
+						<exclude>templates/DictionaryTRIDFTemplate.java</exclude>
+						<exclude>medic/dict/DiseaseDictionary.java</exclude>
+						<exclude>medic/dict/DiseaseDictionaryBackUP.java</exclude>
+						<exclude>medic/dict/DiseaseDictionaryFactory.java</exclude>
+						<exclude>playground/IDFDictionaryCheck.java</exclude>
+					</excludes>
 				</configuration>
 			</plugin>
 		</plugins>
